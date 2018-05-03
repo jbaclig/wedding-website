@@ -1,0 +1,35 @@
+{
+  "name": "wedding-website",
+  "version": "1.0.0",
+  "description": "Jon and Kelly's wedding website",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbaclig/wedding-website.git"
+  },
+  "author": "Jonathan Baclig",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbaclig/wedding-website/issues"
+  },
+  "homepage": "https://github.com/jbaclig/wedding-website#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.3",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^1.0.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.5",
+    "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "gulp-cssnano": "^2.1.3",
+    "npm": "^6.0.0"
+  }
+}

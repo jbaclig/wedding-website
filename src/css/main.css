@@ -31,7 +31,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-sans-serif: "Montserrat", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 *,
@@ -55,7 +55,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -3838,7 +3838,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -3923,7 +3923,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6282,23 +6282,55 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-body {
-  margin: 0;
-  font-size: 16px; }
+/********* utility styles **********/
+/******* text *******/
+.font-fancy {
+  font-family: "Great Vibes", cursive; }
 
 .uppercase {
   text-transform: uppercase; }
 
+/******* box model *******/
 .padding-0 {
   padding: 0; }
 
 .margin-0 {
   margin: 0; }
 
+/********** main styles **********/
+body {
+  margin: 0;
+  font-size: 16px; }
+
+.navbar-custom {
+  background-color: #fff;
+  transition: all 0.5s ease-in-out; }
+  .navbar-custom .navbar-toggler {
+    border: none; }
+    .navbar-custom .navbar-toggler > .fas {
+      transition: all .2s ease-in-out; }
+  .navbar-custom .navbar-toggler.collapsed > .fas {
+    transform: rotate(90deg); }
+  .navbar-custom .nav-item {
+    text-align: right; }
+  .navbar-custom .nav-link,
+  .navbar-custom .navbar-brand,
+  .navbar-custom .navbar-toggler > .fas {
+    color: #000; }
+
+.navbar-custom.transparent {
+  background-color: transparent; }
+  .navbar-custom.transparent .nav-link,
+  .navbar-custom.transparent .navbar-brand,
+  .navbar-custom.transparent .navbar-toggler > .fas {
+    color: #fff; }
+  .navbar-custom.transparent .active > .nav-link {
+    color: #343a40; }
+
 .landing {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(../img/home-sm.jpg);
   background-size: cover;
   background-position: center;
@@ -6320,11 +6352,11 @@ body {
     color: #fff;
     text-align: center; }
   .landing > .overlay .names {
-    font-size: 4rem;
-    font-family: 'Great Vibes', cursive; }
+    font-size: 3.5rem;
+    font-family: "Great Vibes", cursive; }
   .landing > .overlay .details {
     margin: 10px;
-    font-family: 'Montserrat'; }
+    font-family: "Montserrat", sans-serif; }
 
 @media (min-width: 576px) {
   .landing {
@@ -6332,6 +6364,6 @@ body {
 
 @media (min-width: 992px) {
   .landing > .overlay .names {
-    font-size: 6rem; }
+    font-size: 5.5rem; }
   .landing > .overlay .details {
     font-size: 1.3rem; } }

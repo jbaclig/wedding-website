@@ -9,6 +9,42 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
+var path = require('path');
+var gulp = require('gulp');
+var wrap = require('gulp-wrap');
+var declare = require('gulp-declare');
+var concat = require('gulp-concat');
+var merge = require('merge-stream');
+var handlebars = require('gulp-handlebars');
+
+gulp.task('templates', function() {
+  // Assume all partials start with an underscore
+  // You could also put them in a folder such as source/templates/partials/*.hbs
+  var partials = gulp.src(['src/templates/_*.hbs'])
+    .pipe(handlebars())
+    .pipe(wrap('Handlebars.registerPartial(<%= processPartialName(file.relative) %>, Handlebars.template(<%= contents %>));', {}, {
+      imports: {
+        processPartialName: function(fileName) {
+          // Strip the extension and the underscore
+          // Escape the output with JSON.stringify
+          return JSON.stringify(path.basename(fileName, '.js').substr(1));
+        }
+      }
+    }));
+
+  var templates = gulp.src('src/templates/**/[^_]*.hbs')
+    .pipe(handlebars())
+    .pipe(wrap('Handlebars.template(<%= contents %>)'))
+    .pipe(declare({
+      namespace: 'MyApp.templates',
+      noRedeclare: true // Avoid duplicate declarations
+    }));
+
+  // Output both the partials and the templates as build/js/templates.js
+  return merge(partials, templates)
+    .pipe(concat('templates.js'))
+    .pipe(gulp.dest('src/js/'));
+});
 
 gulp.task('browserSync', () => {
     browserSync.init({
@@ -27,8 +63,9 @@ gulp.task('sass', () => {
         }));
 });
 
-gulp.task('watch',['browserSync', 'sass'], () => {
+gulp.task('watch',['browserSync', 'sass', 'templates'], () => {
     gulp.watch('src/scss/**/*.scss', ['sass']);
+    gulp.watch('src/templates/**/*.hbs', ['templates']);
     gulp.watch('src/js/**/*.js', browserSync.reload);
     gulp.watch('src/*.html', browserSync.reload);
 });
@@ -71,7 +108,7 @@ gulp.task('build', (callback) => {
 });
 
 gulp.task('default', (callback) => {
-    runSequence(['sass', 'browserSync', 'watch'],
+    runSequence(['sass', 'templates', 'browserSync', 'watch'],
         callback
     );
 });

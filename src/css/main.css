@@ -6351,12 +6351,8 @@ body {
   .landing > .overlay .content {
     color: #fff;
     text-align: center; }
-  .landing > .overlay .names {
-    font-size: 3.5rem;
-    font-family: "Great Vibes", cursive; }
   .landing > .overlay .details {
-    margin: 10px;
-    font-family: "Montserrat", sans-serif; }
+    margin: 10px; }
 
 @media (min-width: 576px) {
   .landing {

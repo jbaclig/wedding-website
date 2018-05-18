@@ -16,6 +16,15 @@ var declare = require('gulp-declare');
 var concat = require('gulp-concat');
 var merge = require('merge-stream');
 var handlebars = require('gulp-handlebars');
+var pump = require('pump');
+
+gulp.task('uglify-error-debugging', function (cb) {
+  pump([
+    gulp.src('src/**/*.js'),
+    uglify(),
+    gulp.dest('./dist/')
+  ], cb);
+});
 
 gulp.task('templates', function() {
   // Assume all partials start with an underscore
@@ -101,7 +110,7 @@ gulp.task('cache:clear', (callback) => {
 
 gulp.task('build', (callback) => {
     runSequence('clean:dist',
-        ['sass', 'images', 'fonts'],
+        ['sass', 'templates', 'images', 'fonts'],
         'useref',
         callback
     );

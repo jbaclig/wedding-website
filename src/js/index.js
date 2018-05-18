@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded',  function() {
 
     var context = {
         brand: 'J & K',
@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     document.getElementById('navigation').innerHTML = MyApp.templates.nav(context);
 
-    let navbar = document.querySelector('.navbar');
-    document.addEventListener('scroll', () => {
+    var navbar = document.querySelector('.navbar');
+    document.addEventListener('scroll', function() {
         if(window.scrollY === 0) {
             navbar.classList.add('transparent');
         }

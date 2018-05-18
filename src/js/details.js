@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     var detailsContext, ceremonyContext, receptionContext;
 
     detailsContext = {
@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
             'fun!  The night will begin with a Cocktail Hour from 5:30-6:30PM ' +
             'followed by dinner at 7:00PM.',
         details1: 
-            `Looking for a place to stay?  How about things to do between the 
-            ceremony and reception? Check out our `,
+            'Looking for a place to stay?  How about things to do between the' +
+            'ceremony and reception? Check out our ',
         detailsLink: '<a href="guide.html">City Guide</a>',
         details2: 
             ' for some suggestions!'

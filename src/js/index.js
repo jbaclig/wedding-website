@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         brand: 'J & K',
         nav: [
           { url: 'index.html', title: 'Home' },
-          { url: '#story', title: 'Our Story' },
+          { url: 'index.html#story', title: 'Our Story' },
           { url: 'details.html', title: 'Details' },
           { url: 'people.html', title: 'People' },
           { url: 'guide.html', title: 'City Guide' },

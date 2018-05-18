@@ -8,8 +8,21 @@
     font-family: $font-family-fancy
 }
 
-.uppercase {
+.uppercase,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-transform: uppercase;
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+    text-transform: capitalize;
 }
 
 /******* box model *******/
@@ -71,17 +84,25 @@ body {
     }
 }
 
-.landing {
+.jumbotron.landing,
+.jumbotron.page {
     position: relative;
     width: 100vw;
-    min-height: 100vh;
-    background-image: url(../img/home-sm.jpg);
+    height: 100vh;
     background-size: cover;
     background-position: center;
     overflow: hidden;
 }
 
-.landing > .overlay {
+.jumbotron.landing {
+    background-image: url(../img/home-sm.jpg);
+}
+
+.jumbotron.page {
+    background-color: #000;
+}
+
+.jumbotron .overlay {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,12 +128,24 @@ body {
 
 }
 
+section header {
+    margin-bottom: 20px;
+}
+
+.map {
+    margin: 20px 0;
+}
+
 //576 - 767px
 @include media-breakpoint-up(sm) {
 
-    .landing {
-        background-image: url(../img/home-main.jpg);
-    }
+.jumbotron.landing {
+    background-image: url(../img/home-main.jpg);
+}
+
+.jumbotron.page {
+    height: 300px;
+}
 
 }
 
@@ -123,18 +156,22 @@ body {
 
 //992 - 1199px
 @include media-breakpoint-up(lg) {
-    .landing > .overlay {        
-        .names {
-            font-size: 5.5rem;
-        }
-        
-        .details {
-            font-size: 1.3rem;
-        }
+
+.landing > .overlay {        
+    .names {
+        font-size: 5.5rem;
     }
+        
+    .details {
+        font-size: 1.3rem;
+    }
+}
+
 }
 
 //1200px+
 @include media-breakpoint-up(xl) {
+
+
 
 }

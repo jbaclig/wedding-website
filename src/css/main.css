@@ -6287,8 +6287,20 @@ a.text-dark:hover, a.text-dark:focus {
 .font-fancy {
   font-family: "Great Vibes", cursive; }
 
-.uppercase {
+.uppercase,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-transform: uppercase; }
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  text-transform: capitalize; }
 
 /******* box model *******/
 .padding-0 {
@@ -6327,16 +6339,22 @@ body {
   .navbar-custom.transparent .active > .nav-link {
     color: #343a40; }
 
-.landing {
+.jumbotron.landing,
+.jumbotron.page {
   position: relative;
   width: 100vw;
-  min-height: 100vh;
-  background-image: url(../img/home-sm.jpg);
+  height: 100vh;
   background-size: cover;
   background-position: center;
   overflow: hidden; }
 
-.landing > .overlay {
+.jumbotron.landing {
+  background-image: url(../img/home-sm.jpg); }
+
+.jumbotron.page {
+  background-color: #000; }
+
+.jumbotron .overlay {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6346,17 +6364,25 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3); }
-  .landing > .overlay p {
+  .jumbotron .overlay p {
     margin: 0; }
-  .landing > .overlay .content {
+  .jumbotron .overlay .content {
     color: #fff;
     text-align: center; }
-  .landing > .overlay .details {
+  .jumbotron .overlay .details {
     margin: 10px; }
 
+section header {
+  margin-bottom: 20px; }
+
+.map {
+  margin: 20px 0; }
+
 @media (min-width: 576px) {
-  .landing {
-    background-image: url(../img/home-main.jpg); } }
+  .jumbotron.landing {
+    background-image: url(../img/home-main.jpg); }
+  .jumbotron.page {
+    height: 300px; } }
 
 @media (min-width: 992px) {
   .landing > .overlay .names {

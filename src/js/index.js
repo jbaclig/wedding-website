@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
     var context = {
         brand: 'J & K',
         nav: [
-          { url: '#', title: 'Home' },
+          { url: 'index.html', title: 'Home' },
           { url: '#story', title: 'Our Story' },
-          { url: '#', title: 'Details' },
-          { url: '#', title: 'People' },
-          { url: '#', title: 'City Guide' },
+          { url: 'details.html', title: 'Details' },
+          { url: 'people.html', title: 'People' },
+          { url: 'guide.html', title: 'City Guide' },
         ]
     };
     document.getElementById('navigation').innerHTML = MyApp.templates.nav(context);

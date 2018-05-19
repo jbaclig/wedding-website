@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     var detailsContext, ceremonyContext, receptionContext;
 
+    renderNav();
+
     detailsContext = {
         pageClass: 'details',
         displayTitle: 'Details',

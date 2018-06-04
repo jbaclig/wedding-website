@@ -88,7 +88,7 @@ gulp.task('useref', () => {
 });
 
 gulp.task('images', () => {
-    return gulp.src('src/img/**/*.+(png|jpg|gif|svg)')
+    return gulp.src('src/img/**/*.+(png|jpg|gif|svg|JPG)')
         .pipe(cache(imagemin({
             interlaced: true
         })))

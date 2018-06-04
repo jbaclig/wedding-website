@@ -92,7 +92,7 @@ gulp.task('images', () => {
         .pipe(cache(imagemin({
             interlaced: true
         })))
-        .pipe(gulp.dest('dist/img'));
+        .pipe(gulp.dest('img'));
 });
 
 gulp.task('fonts', () => {
@@ -104,12 +104,17 @@ gulp.task('clean:dist', () => {
     return del.sync('dist')
 });
 
+gulp.task('clean:img', () => {
+    return del.sync('img');
+});
+
 gulp.task('cache:clear', (callback) => {
     return cache.clearAll(callback);
 });
 
 gulp.task('build', (callback) => {
-    runSequence('clean:dist',
+    runSequence(
+        ['clean:dist', 'clean:img'],
         ['sass', 'templates', 'images', 'fonts'],
         'useref',
         callback

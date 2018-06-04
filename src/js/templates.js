@@ -38,7 +38,7 @@ this["MyApp"]["templates"]["nav"] = Handlebars.template({"1":function(container,
 
   return "<nav class=\"navbar navbar-expand-lg navbar-custom transparent navbar-light fixed-top\">\n    <a class=\"navbar-brand font-fancy\" href=\"index.html\">"
     + container.escapeExpression(((helper = (helper = helpers.brand || (depth0 != null ? depth0.brand : depth0)) != null ? helper : alias2),(typeof helper === "function" ? helper.call(alias1,{"name":"brand","hash":{},"data":data}) : helper)))
-    + "</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarTogglerDemo02\" aria-controls=\"navbarTogglerDemo02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <i class=\"fas fa-ellipsis-h\"></i>\n    </button>\n              \n    <div class=\"collapse navbar-collapse\" id=\"navbarTogglerDemo02\">\n"
+    + "</a>\n    <button class=\"navbar-toggler collapsed\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarTogglerDemo02\" aria-controls=\"navbarTogglerDemo02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <i class=\"fas fa-ellipsis-h\"></i>\n    </button>\n              \n    <div class=\"collapse navbar-collapse\" id=\"navbarTogglerDemo02\">\n"
     + ((stack1 = (helpers.navigation || (depth0 && depth0.navigation) || alias2).call(alias1,(depth0 != null ? depth0.nav : depth0),{"name":"navigation","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "    </div>\n</nav>\n";
 },"useData":true});

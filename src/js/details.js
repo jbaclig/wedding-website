@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'ceremony and reception? Check out our ',
         detailsLink: '<a href="guide.html">City Guide</a>',
         details2: 
-            ' for some suggestions!'
+            ' for our hotel room block and other suggestions!'
     }
 
     document.getElementById('main-header').innerHTML = 

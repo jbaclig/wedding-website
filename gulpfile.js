@@ -108,13 +108,21 @@ gulp.task('clean:img', () => {
     return del.sync('img');
 });
 
+gulp.task('clean:css', () => {
+    return del.sync('css');
+});
+
+gulp.task('clean:js', () => {
+    return del.sync('js');
+});
+
 gulp.task('cache:clear', (callback) => {
     return cache.clearAll(callback);
 });
 
 gulp.task('build', (callback) => {
     runSequence(
-        ['clean:dist', 'clean:img'],
+        ['clean:css', 'clean:img', 'clean:js'],
         ['sass', 'templates', 'images', 'fonts'],
         'useref',
         callback

@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     receptionContext = {
         eventName: 'Reception',
-        eventTime: '6:00PM',
+        eventTime: '5:00PM',
         locationName: 'BRICK',
         addressLine1: '2863 Historic Dicatur Rd.',
         addressLine2: 'San Diego, CA 92106',
@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
             '117.2102422',
         description:
             'Please join us to celebrate with a night of dinner, dancing, and ' +
-            'fun!  The night will begin with a Cocktail Hour from 5:30-6:30PM ' +
-            'followed by dinner at 7:00PM.',
+            'fun!  The night will begin with a Cocktail Hour from 5:00-6:00PM ' +
+            'followed by dinner at 6:00PM.',
         details1: 
             'Looking for a place to stay?  How about things to do between the' +
             'ceremony and reception? Check out our ',

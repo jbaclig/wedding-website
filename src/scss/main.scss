@@ -95,12 +95,15 @@ body {
 }
 
 .jumbotron.landing {
-    background-image: url(../img/home-main-new.jpg);
+    background-image: url(../img/home-main.jpg);
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 }
 
 .jumbotron.details {
-    background-image: url(../img/details-main-new.jpg);
-    background-position: 65% 20%;
+    background-image: url(../img/details-main.jpg);
 }
 
 .jumbotron.people {
@@ -110,7 +113,7 @@ body {
 
 .jumbotron.guide {
     background-image: url(../img/guide-main.jpg);
-    background-position: center 70%;
+    background-position: 65% 20%;
 }
 
 .jumbotron.page {
@@ -169,10 +172,6 @@ section header {
 
 //576 - 767px
 @include media-breakpoint-up(sm) {
-
-.jumbotron.landing {
-    background-image: url(../img/home-main-new.jpg);
-}
 
 .jumbotron.page {
     height: 75vh;

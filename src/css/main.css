@@ -6349,7 +6349,19 @@ body {
   overflow: hidden; }
 
 .jumbotron.landing {
-  background-image: url(../img/home-sm.jpg); }
+  background-image: url(../img/home-main-new.jpg); }
+
+.jumbotron.details {
+  background-image: url(../img/details-main-new.jpg);
+  background-position: 65% 20%; }
+
+.jumbotron.people {
+  background-image: url(../img/people-main.jpg);
+  background-position: center 35%; }
+
+.jumbotron.guide {
+  background-image: url(../img/guide-main.jpg);
+  background-position: center 90%; }
 
 .jumbotron.page {
   background-color: #000; }
@@ -6368,7 +6380,8 @@ body {
     margin: 0; }
   .jumbotron .overlay .content {
     color: #fff;
-    text-align: center; }
+    text-align: center;
+    padding-bottom: 13em; }
   .jumbotron .overlay .details {
     margin: 10px; }
 
@@ -6380,9 +6393,11 @@ section header {
 
 @media (min-width: 576px) {
   .jumbotron.landing {
-    background-image: url(../img/home-main.jpg); }
+    background-image: url(../img/home-main-new.jpg); }
   .jumbotron.page {
-    height: 300px; } }
+    height: 75vh; }
+  .jumbotron .overlay .content {
+    padding-bottom: 5em; } }
 
 @media (min-width: 992px) {
   .landing > .overlay .names {

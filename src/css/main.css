@@ -6470,8 +6470,9 @@ section header {
     background-position: center top; }
   .party .rachel {
     background-image: url(../img/people/rachel.jpg);
-    background-size: 400%;
-    background-position: 79% 30%; }
+    transform: rotate(90deg);
+    background-size: 230%;
+    background-position: 27% 55%; }
   .party .katy {
     background-image: url(../img/people/katy.jpg);
     transform: rotate(90deg);

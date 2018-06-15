@@ -2,6 +2,7 @@
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
 /********* utility styles **********/
+
 /******* text *******/
 
 .font-fancy {
@@ -34,14 +35,22 @@ h6 {
     margin: 0;
 }
 
+/******* colors *******/
+$burgundy: #89123b;
+$navy: #053a5d;
+$champagne: #f2e5d3;
+$blush: #de9ea9;
+
 /********** main styles **********/
 body {
     margin: 0;
     font-size: 16px;
 }
 
+
 .navbar-custom {
     background-color: $white;
+    border-bottom: 6px solid $blush;
 
     .navbar-toggler {
         border: none;
@@ -72,6 +81,7 @@ body {
 
 .navbar-custom.transparent {
     background-color: transparent;
+    border-color: transparent;
 
     .nav-link, 
     .navbar-brand, 
@@ -167,6 +177,141 @@ section header {
     height:100%;
     width:100%;
     position:absolute;
+}
+
+.party {
+    text-align: center;
+    margin: 20px 0;
+
+    .party-img {
+        width: 200px;
+        height: 200px;
+        margin: 10px auto;
+        border-radius: 100px;
+        background-size: 100%;
+        background-position: center;
+        border-style: solid;
+        border-width: 4px;
+    }
+
+    .sam {
+        background-image: url(../img/people/sam.jpg);
+    }
+
+    .chris {
+        background-image: url(../img/people/chris.jpg);
+        background-size: 200%;
+        background-position: right 73%;
+    }
+
+    .abad {
+        background-image: url(../img/people/abad.jpg);
+        background-size: 400%;
+        background-position: 22% 50%;
+    }
+
+    .tasha {
+        background-image: url(../img/people/tasha.jpg);
+        background-size: 158%;
+        background-position: 50% 10%;
+    }
+
+    .samie {
+        background-image: url(../img/people/samie.jpg);
+        background-size: 150%;
+        background-position: 50% 15%;
+    }
+
+    .jeremy {
+        background-image: url(../img/people/jeremy.jpg);
+    }
+
+    .derek {
+        background-image: url(../img/people/derek.jpg);
+    }
+
+    .britany {
+        background-image: url(../img/people/britany.jpg);
+        background-position: center top;
+    }
+
+    .gina {
+        background-image: url(../img/people/gina.jpg);
+        background-size: 465%;
+        background-position: 54% 38%;
+    }
+
+    .jed {
+        background-image: url(../img/people/jed.jpg);
+        background-size: 420%;
+        background-position: 52% 32%;
+    }
+
+    .christina {
+        background-image: url(../img/people/christina.jpg);
+    }
+
+    .ryan {
+        background-image: url(../img/people/ryan.jpg);
+        background-size: 120%;
+        background-position: 0 0;
+    }
+
+    .missy {
+        background-image: url(../img/people/missy.jpg);
+        background-size: 180%;
+        background-position: 100% 50%;
+        transform: rotate(-90deg);
+    }
+
+    .ben {
+        background-image: url(../img/people/ben.jpg);
+        background-size: 200%;
+        background-position: center top;
+    }
+
+    .rachel {
+        background-image: url(../img/people/rachel.jpg);
+        background-size: 400%;
+        background-position: 79% 30%;
+    }
+
+    .katy {
+        background-image: url(../img/people/katy.jpg);
+        transform: rotate(90deg);
+        background-size: 250%;
+    }
+
+    .jason {
+        background-image: url(../img/people/jason.jpg);
+        background-size: 300%;
+        background-position: 45% 30%;
+    }
+
+    .trevor {
+        background-image: url(../img/people/trevor.jpg);
+        background-size: 220%;
+        background-position: 0% 30%;
+    }
+
+    .dale {
+        background-image: url(../img/people/dale.jpg);
+        background-size: 300%;
+        background-position: 90% 20%;
+    }
+
+    .julie {
+        background-image: url(../img/people/julie.jpg);
+        background-position: center top;
+    }
+}
+
+.party-col:nth-child(odd) .party-img {
+    border-color: $navy;
+}
+
+.party-col:nth-child(even) .party-img {
+    border-color: $burgundy;
 }
 
 

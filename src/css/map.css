@@ -6518,9 +6518,12 @@ section header {
   .guide-map-section .guide-map, .guide-map-section .guide-list {
     height: 46vh; }
   .guide-map-section .guide-map {
-    padding: 0; }
+    padding: 0;
+    padding-bottom: 20px; }
     .guide-map-section .guide-map #city-map {
       height: 100%; }
+    .guide-map-section .guide-map .credit {
+      font-size: 12px; }
   .guide-map-section .guide-list {
     padding: 10px; }
     .guide-map-section .guide-list .carousel > a.control-prev,

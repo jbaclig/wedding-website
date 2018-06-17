@@ -57,6 +57,46 @@ function initMap() {
         },
         zoom: 15
     });
+
+    var ceremonyMarker = new google.maps.Marker({
+        position: {lat: 32.722393,lng: -117.167196},
+        map: map,
+        title: 'Our Lady of the Rosary',
+        icon: 'img/map/star.png'
+    });
+    var ceremonyInfo = new google.maps.InfoWindow({
+        content: '<p><strong>Our Lady of the Rosary</strong><br>Ceremony: 2:00PM</p>'
+    });
+    ceremonyMarker.addListener('click', function() {
+        ceremonyInfo.open(map, ceremonyMarker);
+    });
+
+    var receptionMarker = new google.maps.Marker({
+        position: {lat: 32.740411, lng: -117.210231},
+        map: map,
+        title: 'BRICK',
+        icon: 'img/map/star.png'
+    });
+    var receptionInfo = new google.maps.InfoWindow({
+        content: '<p><strong>BRICK</strong><br>Reception: 5:00PM</p>'
+    });
+    receptionMarker.addListener('click', function() {
+        receptionInfo.open(map, receptionMarker);
+    });
+
+    var hotelMarker = new google.maps.Marker({
+        position: {lat: 32.717864, lng: -117.223696},
+        map: map,
+        title: 'Humphreys Half Moon Inn',
+        icon: 'img/map/star.png'
+    });
+    var hotelInfo = new google.maps.InfoWindow({
+        content: '<p><strong>Humphreys Half Moon Inn</strong></p>'
+    });
+    hotelMarker.addListener('click', function() {
+        hotelInfo.open(map, hotelMarker);
+    });
+
     markers = createMarkers(map);
     activeMarker = markers[currentIndex];
     activeMarker.setOpacity(1);

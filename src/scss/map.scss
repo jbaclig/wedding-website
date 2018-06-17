@@ -1,0 +1,80 @@
+@import 'main';
+
+.guide-map-section {
+    margin-top: 50px;
+
+    .guide-text {
+        text-align: right;
+    }
+
+    .guide-map, .guide-list {
+        height: 46vh;
+    }
+
+    .guide-map {
+        padding: 0;
+
+        #city-map {
+            height: 100%
+        }
+    }
+
+    .guide-list {
+        padding: 10px;
+
+        .carousel {
+
+            > a.control-prev,
+            > a.control-next {
+                display: none;
+            }
+        }
+    }
+}
+
+//992 - 1199px
+@include media-breakpoint-up(lg) {
+    .guide-map-section {
+        .guide-map, .guide-list {
+            height: 400px;
+        }
+
+        .guide-map {
+            padding: 0 10px;
+        }
+
+        .guide-list {
+            .carousel {
+                position: relative;
+                height: 100%;
+                padding-bottom: 5%;
+    
+                > a.control-prev,
+                > a.control-next {
+                    display: block;
+                    position: absolute;
+                    color: $black;
+                    font-size: 2em;
+                    opacity: 1;
+                    width: 30px;
+                    height: 30px;
+                    bottom: 15px;
+                }
+
+                > a.control-prev:hover,
+                > a.control-next:hover {
+                    opacity: 1;
+                    color: $blush;
+                }
+    
+                > a.control-prev {
+                    left: 45%;
+                }
+    
+                > a.control-next {
+                    right: 45%;
+                }
+            }
+        }
+    }
+}

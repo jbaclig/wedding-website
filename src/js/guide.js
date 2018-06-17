@@ -78,6 +78,9 @@ function createMarkers(map) {
                 zIndex: 1
             });
             marker.setOpacity(0.5);
+            marker.addListener('click', function() {
+                $('#listCarousel').carousel(index);
+            });
             markers.push(marker);
         });
     return markers;

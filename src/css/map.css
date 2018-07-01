@@ -6367,6 +6367,10 @@ body {
   background-image: url(../img/guide-main.jpg);
   background-position: 65% 20%; }
 
+.jumbotron.registry {
+  background-image: url(../img/registry-main.jpg);
+  background-position: center 70%; }
+
 .jumbotron.page {
   background-color: #000; }
 
@@ -6525,7 +6529,8 @@ section header {
     .guide-map-section .guide-map .credit {
       font-size: 12px; }
   .guide-map-section .guide-list {
-    padding: 10px; }
+    padding: 10px;
+    position: relative; }
     .guide-map-section .guide-list .carousel > a.control-prev,
     .guide-map-section .guide-list .carousel > a.control-next {
       display: none; }

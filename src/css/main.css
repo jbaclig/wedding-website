@@ -6367,6 +6367,10 @@ body {
   background-image: url(../img/guide-main.jpg);
   background-position: 65% 20%; }
 
+.jumbotron.registry {
+  background-image: url(../img/registry-main.jpg);
+  background-position: center 70%; }
+
 .jumbotron.page {
   background-color: #000; }
 

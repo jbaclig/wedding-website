@@ -6,6 +6,7 @@ function renderNav() {
           { url: 'index.html#story', title: 'Our Story' },
           { url: 'details.html', title: 'Details' },
           { url: 'people.html', title: 'People' },
+          { url: 'registry.html', title: 'Registry' },
           { url: 'guide.html', title: 'City Guide' },
         ]
     };

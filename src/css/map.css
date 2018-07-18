@@ -6513,7 +6513,9 @@ section header {
   .landing > .overlay .names {
     font-size: 5.5rem; }
   .landing > .overlay .details {
-    font-size: 1.3rem; } }
+    font-size: 1.3rem; }
+  .jumbotron {
+    background-attachment: fixed; } }
 
 .guide-map-section {
   margin-top: 50px; }

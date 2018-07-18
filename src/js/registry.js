@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     renderNav();
 
-    detailsContext = {
+    registryContext = {
         pageClass: 'registry',
         displayTitle: 'Registry',
     };
 
     document.getElementById('main-header').innerHTML = 
-        MyApp.templates.pageHeader(detailsContext);
+        MyApp.templates.pageHeader(registryContext);
 });

@@ -40,6 +40,9 @@ $burgundy: #89123b;
 $navy: #053a5d;
 $champagne: #f2e5d3;
 $blush: #de9ea9;
+$burgundy-transparent: rgba(137, 18, 59, 0.7);
+$blush-transparent: rgba(222, 158, 169, 0.7);
+$white-transparent: rgba(255, 255, 255, 0.7);
 
 /********** main styles **********/
 body {
@@ -76,6 +79,20 @@ body {
         color: $black;
     }
 
+    .nav-item.rsvp {
+        background-color: $blush;
+        transition: all .2s ease-in-out;
+        
+        .nav-link {
+            color: $white;
+            transition: all .2s ease-in-out;
+        }
+
+        &:hover .nav-link {
+            color: $champagne;
+        }
+    }
+
     transition: all 0.5s ease-in-out;
 }
 
@@ -87,6 +104,18 @@ body {
     .navbar-brand, 
     .navbar-toggler > .fas {
         color: $white;
+    }
+
+    .nav-item.rsvp {
+        background-color: $white-transparent;
+
+        &:hover {
+            background-color: $white;
+        }
+        
+        .nav-link {
+            color: $burgundy;
+        }
     }
 
     .active > .nav-link {
@@ -158,6 +187,18 @@ body {
 
     .details {
         margin: 10px;
+    }
+
+    .btn-rsvp {
+        border-radius: 30px;
+        font-size: 1.5em;
+        color: $white;
+        background-color: $blush-transparent;
+        border: 4px solid $blush;
+    }
+
+    .btn-rsvp:hover {
+        background-color: $blush;
     }
 
 }
